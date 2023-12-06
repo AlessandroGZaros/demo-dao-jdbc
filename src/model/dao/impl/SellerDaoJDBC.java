@@ -23,6 +23,7 @@ public class SellerDaoJDBC implements SellerDao {
 	public SellerDaoJDBC(Connection conn) {
 		this.conn = conn;
 	}
+	
 	@Override
 	public void insert(Seller obj) {
 		PreparedStatement st = null;
@@ -89,6 +90,7 @@ public class SellerDaoJDBC implements SellerDao {
 			DB.closeStatement(st);
 		}
 	}
+	
 	@Override
 	public void deleteById(Integer id) {
 		PreparedStatement st = null;
@@ -110,6 +112,7 @@ public class SellerDaoJDBC implements SellerDao {
 			DB.closeStatement(st);
 		}
 	}
+	
 	@Override
 	public Seller findById(Integer id) {
 		PreparedStatement st = null;
